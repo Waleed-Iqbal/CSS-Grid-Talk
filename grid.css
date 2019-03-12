@@ -1,0 +1,83 @@
+body {
+  font-size: 25px;
+  color: #222;
+  padding: 3vh 4vw 3vh;
+}
+
+#grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 5vh auto 10vh;
+      grid-template-rows: 5vh auto 10vh;
+  -ms-grid-columns: 5vw auto 10vw;
+      grid-template-columns: 5vw auto 10vw;
+      grid-template-areas: "header header header" "nav content ads" "footer footer footer";
+  width: 90vw;
+  height: 90vh;
+  background-color: black;
+}
+
+#grid-container > div {
+  text-align: center;
+}
+
+#header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+  background-color: powderblue;
+}
+
+#nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: nav;
+  background-color: aqua;
+}
+
+#content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 5vh auto;
+      grid-template-rows: 5vh auto;
+      grid-template-areas: "tabs" "articles";
+  background-color: darkgoldenrod;
+}
+
+#content #tabs {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: tabs;
+  margin: 15px;
+  background-color: cadetblue;
+}
+
+#content #articles {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: articles;
+  margin: 15px;
+  background-color: chartreuse;
+}
+
+#ads {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: ads;
+  background-color: lightsalmon;
+}
+
+#footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: footer;
+  background-color: dodgerblue;
+}
+/*# sourceMappingURL=grid.css.map */
